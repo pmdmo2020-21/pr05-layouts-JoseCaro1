@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imgBella"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitStart"
+        android:src="@drawable/header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblBella"
+        style="@style/TextAppearance.AppCompat.Headline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="14dp"
+        android:text="Beauty and the Beast"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgBella" />
+
+    <ImageView
+        android:id="@+id/imgMas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/lblBella"
+        android:layout_marginTop="14dp"
+        android:scaleType="fitEnd"
+        android:src="@drawable/ic_bookmark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toEndOf="@id/lblBella"
+        app:layout_constraintTop_toBottomOf="@id/imgBella" />
+
+    <TextView
+        android:id="@+id/lblMach"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="10dp"
+        android:text="March 2017 PG 129 minutes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblBella" />
+
+    <Button
+        android:id="@+id/btnRent"
+        android:layout_width="185dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginRight="10dp"
+        android:text="RENT FOR 9,99"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btnPurchase"
+        app:layout_constraintTop_toBottomOf="@id/lblMach" />
+
+
+    <Button
+        android:id="@+id/btnPurchase"
+        android:layout_width="185dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_marginRight="14dp"
+        android:text="BUY FOR 29,99"
+        app:layout_constraintLeft_toRightOf="@id/btnRent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblMach" />
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="14dp"
+        android:background="@color/gray_divider"
+        app:layout_constraintTop_toBottomOf="@id/btnRent" />
+
+    <!-- ESTA VISTA CORRESPONDE AL BOTÓN REDONDO -->
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/float1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_edit_24"
+        app:layout_constraintEnd_toStartOf="@+id/float2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line1"
+        app:tint="@color/white"
+        android:layout_marginTop="10dp"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/float2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_family"
+        app:layout_constraintEnd_toStartOf="@+id/float3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/float1"
+        app:layout_constraintTop_toBottomOf="@id/line1"
+        app:tint="@color/white"
+        android:layout_marginTop="10dp"/>
+
+    <!-- ESTA VISTA CORRESPONDE AL BOTÓN REDONDO -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/float3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/tomato"
+        app:layout_constraintEnd_toStartOf="@+id/float4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/float2"
+        app:layout_constraintTop_toBottomOf="@id/line1"
+        app:tint="@color/white"
+        android:layout_marginTop="10dp"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/float4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line1"
+        android:src="@drawable/ic_similar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/float3"
+        app:layout_constraintTop_toBottomOf="@id/line1"
+        app:tint="@color/white"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/lblFloat1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="242 ratings"
+        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/float1"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/lblFloat2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Family"
+        app:layout_constraintHorizontal_bias="0.375"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/float2"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/lblFloat3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="71%"
+        app:layout_constraintHorizontal_bias="0.62"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/float3"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/lblFloat4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Similar"
+        app:layout_constraintHorizontal_bias="0.883"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/float4"
+        android:layout_marginTop="10dp" />
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        app:layout_constraintTop_toBottomOf="@id/lblFloat1"
+        android:layout_marginTop="10dp"
+        android:background="@color/gray_divider" />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="390dp"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/line2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="The story and characters you know and love come to spectacular life in the live-action adaption of Disney's animated classic Beauty and the best" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
